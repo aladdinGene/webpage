@@ -1,0 +1,88 @@
+body{
+    background-color: #911414;
+    padding-top: 20px;
+}
+.btn{
+    background-color: #FFF;
+    color: #000;
+    font-size: 20px;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+.btn.hide{
+    display: none;
+}
+.btn-wrap{
+    position: relative;
+}
+#excel_file{
+        position: absolute;
+    top: 0;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    opacity: 0;
+    width: 80%;
+}
+.image-wrap{
+    display: flex;
+}
+.image-wrap.hide{
+    display: none;
+}
+.image-card-wrap{
+    width: 74.99%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-card{
+    width: 33.33%;
+    text-align: center;
+}
+.checkbox-wrap{
+    width: 12.499%;
+    text-align: center;
+    padding: 0 10px;
+}
+.dir-name, .checkbox-name{
+    background-color: #FFF;
+    color: #000;
+    font-size: 20px;
+    display: inline-block;
+    margin: 10px auto;
+    font-weight: 700;
+    padding: 10px;
+    position: relative;
+}
+.img-preview{
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    width: 80%;
+}
+.checkbox-container{
+    background-color: #FFF;
+    padding: 10px 0;
+}
+.checkbox-row{
+    padding: 5px 10px;
+    font-size: 18px;
+}
+.choices__inner{
+    width: calc(100% - 15px);
+}
+#folder-choice, .choices{
+    width: 80%;
+    margin: 10px auto;
+}
+#folder-choice.hide{
+    display: none;
+}

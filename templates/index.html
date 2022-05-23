@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Webpage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <script type="text/javascript" src="{% static 'assets/js/tiff.min.js' %}"></script>
+</head>
+<body>
+
+<div class="btn-wrap">
+    <button class="btn">Input excel file</button>
+    <input type="file" id="excel_file" accept=".xlsx" />
+</div>
+<button class="btn" id="input-btn">Input folder where images are saved</button>
+<div id="test-ele"></div>
+<!-- <div id="excel_data" class="mt-5"></div> -->
+<div class="image-wrap hide">
+    <div class="image-card-wrap">
+    </div>
+    <div class="checkbox-wrap">
+        <p class="checkbox-name">Category</p>
+        <div class="checkbox-container">
+            {% for category in categories %}
+                <div class="checkbox-row">
+                    <label><input type="radio" name="category" value="{{category}}" {% if forloop.counter == 1 %}checked{% endif %} />
+                    {{category}}</label>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="checkbox-wrap">
+        <p class="checkbox-name">Comment</p>
+        <div class="checkbox-container">
+            {% for option in options %}
+                <div class="checkbox-row">
+                    <label><input type="radio" name="option" value="{{option}}" {% if forloop.counter == 1 %}checked{% endif %} />
+                    {{option}}</label>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<select id="folder-choice" class="hide" placeholder="Select folders..." multiple>
+</select>
+<button class="btn hide" id="show-btn">Show Images</button>
+<button class="btn hide" id="output-btn">Output file location to export</button>
+<button class="btn hide" id="next-btn">Next</button>
+<script type="text/javascript" src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+<script src="https://cdn.sheetjs.com/xlsx-0.18.7/package/dist/xlsx.full.min.js"></script>
+<script type="text/javascript" src="https://cdn.sheetjs.com/xlsx-0.18.7/package/dist/xlsx.zahl.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+<script type="text/javascript" src="{% static 'assets/js/excel.js' %}"></script>
+</body>
+</html>
