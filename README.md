@@ -1,4 +1,4 @@
-# Maxerience
+# Local Webpage
 version @1.0.0
 
 ## Installation
@@ -72,4 +72,4 @@ Uploaded images are stored in /media/images/ directory.
 ```
 
 ## Demo
-[DEMO](https://webpage.herokuapp.com/)
+[DEMO](https://localwebpage.herokuapp.com/)
